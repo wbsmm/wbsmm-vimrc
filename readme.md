@@ -3,4 +3,6 @@
 索性在其basic[amix/vimrc basic](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)基础上,自己一个个单独安装插件.
 已装的插件见[plugin.md](plugin.md)
 
+由于在服务端开发,所以还需要会话工具.我打算使用的是[tmux](tmux.md)
+
 
