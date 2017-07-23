@@ -2,7 +2,7 @@
 
 # 前言
 
-1. vim版本至少要7.4(youcompleteme插件需要)
+1. vim版本至少要7.4.1578+(youcompleteme插件需要),可以编译安装vim
 
 2. `:h [插件名]`可以获取帮助文档 如`:h Vundle`;
 
@@ -47,37 +47,7 @@ PS: `:h 插件名`可查看文档如:
 # YouCompleteMe
 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) 代码补全
 
-使用Vundle下载后,还需要编译安装.
-
-1. 准备编译环境 cmake 和python
-mac下使用`brew install cmake`就行
-ubuntu `sudo apt-get install build-essential cmake` `sudo apt-get install python-dev python3-dev`
-
-2. 进行编译安装 
-`cd ~/.vim/bundle/YouCompleteMe`
-`./install.py `后可加参数,添加语义支持.每个语义的添加都需要先安装一些外部工具.
-
-默认没有php的语义,但其内置了neocomplcache.所以可用tags.
-
-安装ctags工具`brew install ctags` ` apt-get install exuberant-ctags` 
-在工程目录下`ctags -R` 另外vim的目录也在工程目录即可
-
-phptags生成
-`~/.ctags`中
-
-```
---regex-php=/^[ \t]*[(private|public|static)( \t)]*function[ \t]+([A-Za-z0-9_]+)[ \t]*\(/\1/f, function, functions/
---regex-php=/^[ \t]*[(private|public|static)]+[ \t]+\$([A-Za-z0-9_]+)[ \t]*/\1/p, property, properties/
---regex-php=/^[ \t]*(const)[ \t]+([A-Za-z0-9_]+)[ \t]*/\2/d, const, constants/
-```
-bashrc中
-`alias phptags='ctags --langmap=php:.engine.inc.module.theme.php  --php-kinds=cdf  --languages=php'`
-
-PS:c c++
-```
-ctags -R --c++-kinds=+px --fields=+iaS --extra=+q .
-ctags -R --c-kinds=+px --c++-kinds=+px --fields=+iafksS --extra=+qf /usr/include/*
-```
+使用Vundle下载后,还需要编译安装.详细见此[plugin_ycm.md](plugin_ycm.md)
 
 `ctrl+]` 跳转到函数定义处，用 `ctrl+t` 或者`ctrl+o` 跳回
 
@@ -117,8 +87,10 @@ q    to close the quickfix window
 
 basrc中添加
  解决vim中:Ack命令的警告perl: warning: Please check that your locale settings:
-`export LC_ALL=C` 
-git报错`git_prompt_info:5: character not in range`
+`export LC_ALL=C` 但是这样git报错`git_prompt_info:5: character not in range`
+
+处理ack版本小于2.0时Unknown option: s错误
+ `let g:ack_default_options = " -H --nocolor --nogroup --column"`
 
 
 # peaksea
@@ -131,4 +103,6 @@ git报错`git_prompt_info:5: character not in range`
 
 # lightline
 [lightline](https://github.com/itchyny/lightline.vim) 底部状态栏
+
+
 
