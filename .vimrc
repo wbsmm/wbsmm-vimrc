@@ -1,4 +1,4 @@
-source ~/vimrcs/vundle.vim
-source ~/vimrcs/plugins.vim
-source ~/vimrcs/basic.vim
-source ~/vimrcs/fix.vim
+source ~/.myvimrcs/vundle.vim
+source ~/.myvimrcs/plugins.vim
+source ~/.myvimrcs/basic.vim
+source ~/.myvimrcs/fix.vim
