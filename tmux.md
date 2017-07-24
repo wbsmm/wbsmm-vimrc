@@ -12,11 +12,17 @@ ctrl-b 前缀键 按住松开再加其它键实现功能
 `man tmux` 和 `ctrl ?`
 ## 会话
 新建会话
-`tmux new -s <name-of-my-session>`
+`tmux new -s <name-of-my-session>` new-session缩写
 `ctrl-b new -s <name-of-my-new-session>`
+关闭退出会话
+exit 命令或者 [Ctrl+d] 组合键，退出 tmux 会把会话结束掉
+分离和连接会话
+`ctrl-b d` detach
+`tmux a -t <目标会话名>` attach-session
+
 除非显示关闭,否则在计算机关闭前会话都不会消失
 `tmux ls` `ctrl-b s`列出会话
-`tmux attach`
+`tmux attach` 连接上次退出的会话
 ## 窗口 window
 
 `ctrl-b c`创建窗口
