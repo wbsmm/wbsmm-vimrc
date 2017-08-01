@@ -27,12 +27,48 @@ exit 命令或者 [Ctrl+d] 组合键，退出 tmux 会把会话结束掉
 
 `ctrl-b c`创建窗口
 `ctrl-b [数字]`切换窗口 `n`后 `p`前
-
+`ctrl-b &` 	关闭当前窗口
+`ctrl-b ,` 	重命名当前窗口；这样便于识别
 ## 分屏 pane
 `ctrl-b % `竖直分割
 `ctrl-b "` 水平分割
 `ctrl-b 方向键`切换
+`ctrl-b x` 	关闭当前面板
+## 复制 粘贴vi风格
+`set-window-option -g mode-keys vi`
+1) `Control+b [` 进入复制模式
+2) `Space` 开始选择
+4) `Enter` 结束选择
+5) `Control+b ]` 粘贴复制的
+
+
+`tmux show-buffer`
+`tmux save-buffer foo.txt`
+
+`Control + b #`
+`tmux list-buffers`
+
+`tmux show-buffer -b [buffer序号]`
+`tmux save-buffer -b [buffer序号] foo.txt`
+
+### 从本地粘贴格式混乱问题
+具体表现为有换行符的自动添加, 缩进混乱
+
+**在tmux中直接command+V 本质上是模拟键盘字符挨个输入.所以在vim的normal模式下也可能呢键入字符**
+使用vim的paste模式
+`:set paste`
+`:set nopaste`
+当前快捷键
+`<leader>pp`
+
+# 其它
+`ctrl-b t` 显示时钟
+`:source-file ~/.tmux.conf` 不重启加载配置
+`tmux -V` 版本号
+`tmux`  启动
+`tmux kill-server`  关闭
+
 # TODO 
-1. 配置vi模式. 例如:粘贴复制不用鼠标
+1. Tmux Resurrect 保存会话(用于机器重启)
 2. Tmate 向其它人分享会话
 3. Tmuxinator 定义会话模板 简化创建过程. 例如:每次会话都是一个编辑器和一个shell窗口
