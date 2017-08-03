@@ -51,7 +51,7 @@ exit 命令或者 [Ctrl+d] 组合键，退出 tmux 会把会话结束掉
 `tmux show-buffer -b [buffer序号]`
 `tmux save-buffer -b [buffer序号] foo.txt`
 
-### 从本地粘贴格式混乱问题
+### 从本机剪贴板往tmux粘贴格式混乱问题
 具体表现为有换行符的自动添加, 缩进混乱
 
 **在tmux中直接command+V 本质上是模拟键盘字符挨个输入.所以在vim的normal模式下也可能呢键入字符**
@@ -61,6 +61,35 @@ exit 命令或者 [Ctrl+d] 组合键，退出 tmux 会把会话结束掉
 当前快捷键
 `<leader>pp`
 
+### 实现从远程机器tmux复制内容到本机mac剪贴板
+`ssh -R 1234:localhost:22 remoteServer` remoteServer上开启1234端口, 发送到1234的数据会被**转发**到localhost(本地机器)的22端口(ssh服务端口)
+`tmux save-buffer - | ssh -p 1234 localhost pbcopy` 通过1234端口连接本地的ssh服务
+`bind C-c run "tmux save-buffer - | ssh -p 1234 localhost pbcopy"`
+基于`tmux save-buffer - | ssh host pbcopy`
+需要开启mac的ssh.系统偏好设置-共享. 还需要配置密钥登录 和一些安全选项.
+PS:配置可用alias和~/.ssh/config简化
+
+`ssh -R` 远程转发  简单的说就是在登录的机器上开启一个指定的端口,所有发送到这个端口的数据会自动转发到host:hostport这个地址中.
+man文档
+-R [bind_address:]port:host:hostport
+ Specifies that the given port on the remote (server) host is to be forwarded to the given host and port on the local side.  This works by allocating a
+ socket to listen to port on the remote side, and whenever a connection is made to this port, the connection is forwarded over the secure channel, and a
+ connection is made to host port hostport from the local machine.
+
+ Port forwardings can also be specified in the configuration file.  Privileged ports can be forwarded only when logging in as root on the remote machine.
+ IPv6 addresses can be specified by enclosing the address in square braces.
+
+ By default, the listening socket on the server will be bound to the loopback interface only.  This may be overridden by specifying a bind_address.  An
+ empty bind_address, or the address ‘*’, indicates that the remote socket should listen on all interfaces.  Specifying a remote bind_address will only
+ succeed if the server's GatewayPorts option is enabled (see sshd_config(5)).
+
+ If the port argument is ‘0’, the listen port will be dynamically allocated on the server and reported to the client at run time.  When used together
+ with -O forward the allocated port will be printed to the standard output.
+
+
+ 
+
+
 # 其它
 `ctrl-b t` 显示时钟
 `:source-file ~/.tmux.conf` 不重启加载配置
@@ -69,6 +98,8 @@ exit 命令或者 [Ctrl+d] 组合键，退出 tmux 会把会话结束掉
 `tmux kill-server`  关闭
 
 # TODO 
-1. Tmux Resurrect 保存会话(用于机器重启)
-2. Tmate 向其它人分享会话
+1. Tmux Resurrect  tmux-continuum保存会话(用于机器重启); 
+2. Tmate 向其它人分享会话; 
 3. Tmuxinator 定义会话模板 简化创建过程. 例如:每次会话都是一个编辑器和一个shell窗口
+4. tmux-yank copy到系统剪贴板.
+ .
