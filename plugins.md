@@ -85,13 +85,15 @@ T    to open in new tab, keeping focus on the results
 go  to preview file, open but maintain focus on ack.vim results
 q    to close the quickfix window
 
-basrc中添加
- 解决vim中:Ack命令的警告perl: warning: Please check that your locale settings:
-`export LC_ALL=C` 但是这样git报错`git_prompt_info:5: character not in range`
 
-处理ack版本小于2.0时Unknown option: s错误
+1. 本机mac中 :Ack命令的警告perl: warning: Please check that your locale settings:
+未解决
+
+2. 处理ack版本小于2.0时Unknown option: s错误
  `let g:ack_default_options = " -H --nocolor --nogroup --column"`
 
+PS:本地mac和公司机都安装了ag(the_silver_searcher)2.0.0,所以没有上面两个问题.
+根据文档来即可,mac用brew,公司机编译安装.
 
 # peaksea
 [peaksea](https://github.com/vim-scripts/peaksea) 主题
