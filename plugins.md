@@ -71,7 +71,7 @@ php在github有phpctags工具和[vim-php/tagbar-phpctags.vim](https://github.com
 # ack.vim
 [ack.vim](https://github.com/mileszs/ack.vim) idea的find-in-path功能
 基于unix的[ack](https://beyondgrep.com/documentation/)工具,也可以使用在ack基础上[ag(the_silver_searcher)](https://github.com/ggreer/the_silver_searcher)工具
-当前使用ag主要是其支持忽略文件(.gitignore和.ignore中的).
+当前使用ag主要是其**支持忽略文件**(.gitignore和.ignore中的).
 默认的grep工具`grep -H -r 'what_you_search' * | less`明显感觉不方便
 `brew install the_silver_searcher`
 `apt-get install silversearcher-ag`
@@ -85,6 +85,14 @@ T    to open in new tab, keeping focus on the results
 go  to preview file, open but maintain focus on ack.vim results
 q    to close the quickfix window
 
+其中{pattern}要加引号,单双引号皆可 需要注意正则转义问题.实际上语言用的perl.
+
+本地mac和公司机都安装了ag(the_silver_searcher)2.0.0,所以没有上面两个问题.
+根据文档来即可,mac用brew,公司机编译安装.所以下面问题无关紧要
+
+
+
+使用Ack存在的问题
 
 1. 本机mac中 :Ack命令的警告perl: warning: Please check that your locale settings:
 未解决
@@ -92,8 +100,6 @@ q    to close the quickfix window
 2. 处理ack版本小于2.0时Unknown option: s错误
  `let g:ack_default_options = " -H --nocolor --nogroup --column"`
 
-PS:本地mac和公司机都安装了ag(the_silver_searcher)2.0.0,所以没有上面两个问题.
-根据文档来即可,mac用brew,公司机编译安装.
 
 # peaksea
 [peaksea](https://github.com/vim-scripts/peaksea) 主题
