@@ -39,3 +39,11 @@ dpkg: 处理软件包 install-info (--configure)时出错：
  install-info
 ```
 原因: /etc/enviroment文件之前改过,先注掉即可
+
+
+# macvim
+就是mac下的gvim,brew安装即可
+会使用vim的配置  自身的配置可在`~/.gvimrc`
+`set lines=55 columns=170`
+
+装这个唯一的好处:可以直接拖到图标上打开文件;其它用的少暂未发现;
