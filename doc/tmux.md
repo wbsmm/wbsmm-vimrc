@@ -120,7 +120,6 @@ man文档
 
 # 其它
 `ctrl-b t` 显示时钟
-`:source-file ~/.tmux.conf` 不重启加载配置
 `tmux -V` 版本号
 `tmux`  启动
 `tmux kill-server`  关闭
@@ -131,17 +130,4 @@ man文档
 3. Tmuxinator 定义会话模板 简化创建过程. 例如:每次会话都是一个编辑器和一个shell窗口
 4. tmux-yank copy到系统剪贴板.
 
-<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/monokai_sublime.min.css">
-<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>
-hljs.configure({tabReplace: '    '});
-hljs.initHighlightingOnLoad();
-</script>
-<style type="text/css">
-pre {
-    padding: 5pt 5pt;
-}
-</style>
-
-`var tmp = new Array();`
  
