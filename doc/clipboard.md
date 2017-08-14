@@ -1,4 +1,4 @@
-# clipboard剪贴板
+# clipboard剪贴板说明
 
 # 机器自身管理程序.
 

@@ -1,4 +1,4 @@
-# 我的vim配置和服务端开发环境配置
+# 服务端开发环境配置
 
 ## 说明
 
@@ -12,14 +12,24 @@
 现阶段是为php开发服务;  
   
 希望对你的环境搭建有所帮助.
+
+PS:其实主要就是这几样工具: ssh相关,终端,会话工具,编辑器
     
-## vim
+## 编辑器 vim
     之前直接用的[amix/vimrc](https://github.com/amix/vimrc)Awosome版本.但是感觉自己不需要那么多配置,而且始终记不住一些功能.
 索性在其basic[amix/vimrc basic](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)基础上,自己一个个单独安装插件.
-已装的插件见[plugin.md](plugin.md)
+已装的插件见[plugin.md](doc/plugin.md)
 
-## 其它工具
-1. 会话工具.我用的是[tmux](tmux.md).就因为它比screen新.
-2. 比较工具,[vimdiff](diff.md).必须两窗口形式才好比较.
+## 会话工具 tmux
+我用的是[tmux](doc/tmux.md).就因为它比screen新.
+
+## ssh
+[ssh](doc/ssh.md)总结了一些关于ssh的简化操作
+
+## 终端(iterm2+zsh)
+其实mac自带终端加了zsh后也不错了.不过iterm2一些细节上做的更好[iterm2.md](doc/iterm2.md)
+
+## 其它
+1. 比较工具,[vimdiff](doc/diff.md).必须两窗口形式才好比较.
 
 
