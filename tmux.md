@@ -7,9 +7,15 @@
 
 主要参考这篇[博客](http://tangosource.com/blog/a-tmux-crash-course-tips-and-tweaks/)
 
+
+# 编译安装
+公司机器tmux 只有1.6. 决定编译安装最新版,维护两套配置是很麻烦的.
+
+
+
 # 按键
 ctrl-b 前缀键 按住松开再加其它键实现功能
-`man tmux` 和 `ctrl ?`
+`man tmux` 和 `ctrl-b ?`
 ## 会话
 新建会话
 `tmux new -s <name-of-my-session>` new-session缩写
@@ -23,6 +29,8 @@ exit 命令或者 [Ctrl+d] 组合键，退出 tmux 会把会话结束掉
 除非显示关闭,否则在计算机关闭前会话都不会消失
 `tmux ls` `ctrl-b s`列出会话
 `tmux attach` 连接上次退出的会话
+
+`tmux kill-session -t` 干掉会话
 ## 窗口 window
 
 `ctrl-b c`创建窗口
@@ -34,6 +42,11 @@ exit 命令或者 [Ctrl+d] 组合键，退出 tmux 会把会话结束掉
 `ctrl-b "` 水平分割
 `ctrl-b 方向键`切换
 `ctrl-b x` 	关闭当前面板
+
+## 命令行模式
+`ctrl-b :`进入
+`set mouse on[off]` 鼠标模式
+
 ## 复制 粘贴vi风格
 `set-window-option -g mode-keys vi`
 1) `Control+b [` 进入复制模式
@@ -62,6 +75,8 @@ exit 命令或者 [Ctrl+d] 组合键，退出 tmux 会把会话结束掉
 `<leader>pp`
 
 ### 实现从远程机器tmux复制内容到本机mac剪贴板
+PS: 一般情况下关闭tmux的鼠标模式使用终端的粘贴模式即可,见[clipboard.md](clipboard.md)
+
 `ssh -R 1234:localhost:22 remoteServer` remoteServer上开启1234端口, 发送到1234的数据会被**转发**到localhost(本地机器)的22端口(ssh服务端口)
 `tmux save-buffer - | ssh -p 1234 localhost pbcopy` 通过1234端口连接本地的ssh服务
 `bind C-c run "tmux save-buffer - | ssh -p 1234 localhost pbcopy"`
