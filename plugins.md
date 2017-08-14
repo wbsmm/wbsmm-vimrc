@@ -43,6 +43,7 @@ PS: `:h 插件名`可查看文档如:
  
 # syntastic
 [syntastic](https://github.com/vim-syntastic/syntastic) 语法检查
+[syntastic配置](plugin_syntastic.md)
 
 # YouCompleteMe
 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) 代码补全
