@@ -1,0 +1,7 @@
+# ~/.ssh/config文件
+
+Host xxx
+Hostname xxx.com
+Port 22
+User root
+IdentityFile ~/.ssh/id_rsa

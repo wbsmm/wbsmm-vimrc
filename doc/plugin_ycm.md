@@ -76,6 +76,8 @@ https://github.com/Valloric/YouCompleteMe/issues/2596
 由于系统版本Debian太老,apt-get无法获取最新版考虑编译安装
 
 http://llvm.org/docs/GettingStarted.html#requirements
+但是公司给的虚拟机磁盘只有4G多 而这个`A full build of LLVM and Clang will need around 15-20 GB of disk space.`
+所以只能选择放弃
 
 需要gcc4.8
 ```

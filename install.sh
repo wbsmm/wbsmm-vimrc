@@ -10,7 +10,8 @@ cp configfiles/.tmux.conf ~/.tmux.conf
 
 echo 'copy .vimrc and .myvimrcs to ~/'
 cp configfiles/.vimrc ~/.vimrc
-cp -r .myvimrcs/ ~/.myvimrcs
+mkdir -p ~/.myvimrcs
+cp .myvimrcs/* ~/.myvimrcs
 
 echo 'copy svndiffwrap.sh to /usr/local/bin/'
 cp configfiles/svndiffwrap.sh  /usr/local/bin/svndiffwrap.sh

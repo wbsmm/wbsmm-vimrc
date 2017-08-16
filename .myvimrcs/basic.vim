@@ -2,19 +2,23 @@
 " 自己添加的关于tmux的配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if exists('$TMUX')
-  set term=screen-256color
+  set term=xterm-256color
 endif
 
-" 光标形状
-if exists('$ITERM_PROFILE')
-   if exists('$TMUX')
-     let &t_SI = "\<Esc>[3 q"
-     let &t_EI = "\<Esc>[0 q"
-   else
-     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-   endif
+" 光标形状 注意:这是用于iterm2的
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+
+" 进入插入模式 编辑行会有下划线 一个好处是没有行号是 可以清楚看到过长行的情况
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
