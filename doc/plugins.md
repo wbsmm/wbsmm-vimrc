@@ -105,7 +105,7 @@ q    to close the quickfix window
 # jellybeans
 [jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
 之前用的[peaksea](https://github.com/vim-scripts/peaksea) 在mac默认终端(背景色白色)并不好使 背景色仍是黑色.
-很多其它的如Dracula做不到这点. 但是之前做java还是很喜欢idea,所以用jellybeans
+很多其它的如Dracula做不到这点. 而jellybeans可支持配置是否使用终端背景,当前我偶尔会用mac自带终端的.
 
 # vim-markdown
 [vim-markdown](https://github.com/plasticboy/vim-markdown)

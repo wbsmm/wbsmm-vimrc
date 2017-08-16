@@ -154,7 +154,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 
-# 配置gvim下字体
+" 配置gvim下字体
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
