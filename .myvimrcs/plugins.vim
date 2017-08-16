@@ -77,4 +77,4 @@ nmap <F9> :TagbarToggle<CR>
 
 " 设置主题
 set background=dark
-colorscheme peaksea
+colorscheme jellybeans

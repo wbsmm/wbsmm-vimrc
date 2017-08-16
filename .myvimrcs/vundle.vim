@@ -38,7 +38,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 
 " peaksea 主题
-Plugin 'vim-scripts/peaksea'
+" Plugin 'vim-scripts/peaksea'
+" 毕竟idea用的多
+Plugin 'nanotech/jellybeans.vim'
+
 
 
 " 语言支持
