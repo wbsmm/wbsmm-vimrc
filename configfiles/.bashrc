@@ -7,4 +7,4 @@ alias phptags='ctags --langmap=php:.engine.inc.module.theme.php  --php-kinds=cdf
 alias ll='ls -alh'
 
 # xclip 如果有的话
-# xclip='xclip -sel clip'
+# alias xclip='xclip -sel clip'
