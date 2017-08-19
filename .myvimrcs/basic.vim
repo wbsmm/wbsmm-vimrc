@@ -34,7 +34,7 @@ filetype plugin on
 filetype indent on
 
 " Set to auto read when a file is changed from the outside
-" 需要注意的是 这个文件没有被vim修改过.
+" 需要注意的是 这个文件没有被vim修改过,才会自动更新
 set autoread
 
 " With a map leader it's possible to do extra key combinations

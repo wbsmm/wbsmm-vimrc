@@ -102,10 +102,24 @@ q    to close the quickfix window
  `let g:ack_default_options = " -H --nocolor --nogroup --column"`
 
 
-# jellybeans
+# 主题
+配置见colorschema.vim这个文件
+
+[vimcolors](http://vimcolors.com/)
+
+[peaksea](https://vim.sourceforge.io/scripts/script.php?script_id=3412) 
+是[amix/vimrc](https://github.com/amix/vimrc)使用的主题.
+很不错 默认CursorLine是下划线 自己调成了背景深灰色 
+
 [jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
-之前用的[peaksea](https://github.com/vim-scripts/peaksea) 在mac默认终端(背景色白色)并不好使 背景色仍是黑色.
-很多其它的如Dracula做不到这点. 而jellybeans可支持配置是否使用终端背景,当前我偶尔会用mac自带终端的.
+ 有更多的配置  搜索匹配词是下划线而非背景色 注释却是背景色(TODO没有) ...
+[Dracula](https://draculatheme.com/vim/)
+在mac默认终端(背景色白色)并不好使 背景色仍是白色.虽然iterm2不错 但我偶尔还是会用mac终端的
+
+[tomasr/molokai](https://github.com/tomasr/molokai)
+很老的主题 也还不错
+ 
+
 
 # vim-markdown
 [vim-markdown](https://github.com/plasticboy/vim-markdown)

@@ -37,12 +37,18 @@ Plugin 'kien/ctrlp.vim'
 " 查找文件内容 idea的 find-in-path. 需要先安装ack工具
 Plugin 'mileszs/ack.vim'
 
-"不能覆盖终端的背景色
-"Plugin 'dracula/vim'
 " peaksea 主题
-" Plugin 'vim-scripts/peaksea'
-" 毕竟idea用的多
-Plugin 'nanotech/jellybeans.vim'
+" Plugin 'vim-scripts/peaksea' "改成从官网下最新的
+
+
+
+" Plugin 'dracula/vim'
+" Plugin 'crusoexia/vim-dracula'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'tomasr/molokai'
+
+" Plugin 'nanotech/jellybeans.vim'
+
 
 
 
