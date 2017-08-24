@@ -1,7 +1,7 @@
 " 设置主题
 
-
-set background=dark " peaksea主题是有light版本的
+" peaksea主题是有light版本的
+set background=dark
 colorscheme peaksea
 
 
@@ -10,15 +10,15 @@ colorscheme peaksea
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 " https://github.com/guns/xterm-color-table.vim
 
-" PS:当前重置background的话 又会恢复默认设置;但是我只用黑色的而且作者不建议执行`:set background`
+" PS:当前重置background的话 又会恢复默认设置;但是我只用黑色的
 " 设置光标所在行
 if &t_Co==256
-    hi CursorLine   ctermbg=236  cterm=NONE guibg=#303030 gui=NONE
+    autocmd ColorScheme * hi CursorLine   ctermbg=236  cterm=NONE guibg=#303030 gui=NONE
 endif
-hi CursorLine   guibg=#303030 gui=NONE
+autocmd ColorScheme * hi CursorLine   guibg=#303030 gui=NONE
 
 " 设置注释斜体 当前只有gvim 终端配置有点麻烦 见https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
-hi Comment	gui=italic
+autocmd ColorScheme * hi Comment	gui=italic
 
 
 
