@@ -20,6 +20,8 @@ PS:其实主要就是这几样工具: ssh相关,终端,会话工具,编辑器
 索性在其basic[amix/vimrc basic](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)基础上,自己一个个单独安装插件.
 已装的插件见[plugin.md](doc/plugin.md)
 
+入门级VIM使用图解： [入门级VIM使用图解](http://blog.csdn.net/Marksinoberg/article/details/77595574)
+
 ## 会话工具 tmux
 我用的是[tmux](doc/tmux.md).就因为它比screen新.
 
