@@ -74,4 +74,15 @@ endif
 nmap <F9> :TagbarToggle<CR>
 
 
+" lightline插件配置
+" 只是把原本filename只显示文件名 换成relativepath(相对路径)
+
+let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'relativepath', 'modified', 'helloworld' ] ]
+      \ }
+      \ }
+
 

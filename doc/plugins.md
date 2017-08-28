@@ -128,5 +128,17 @@ q    to close the quickfix window
 # lightline
 [lightline](https://github.com/itchyny/lightline.vim) 底部状态栏
 
+内置了colorschema,不和vim的冲突
+可以支持定制,
+
+>See :h 'statusline' to check the statusline flags.
+>Add a new component to g:lightline.component.
+>Add the component name to g:lightline.active.left or g:lightline.active.right.
+
+`:h g:lightline.component`可以看到内置的一些组件(简单的对statusline语法封装)配置那里`'component': {`
+
+`:h g:lightline.component_function` 可以支持自定义函数,配置那里`'component_function': {`
+
+
 
 
