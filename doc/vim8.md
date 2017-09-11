@@ -26,7 +26,7 @@ https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
 `sudo apt-get remove vim vim-runtime gvim`
 `sudo apt-get remove vim-tiny vim-common vim-gui-common vim-nox`
 2. configure 变成一行(根据文档去除了Python3相关 禁用了gui) 
-`./configure --with-features=huge --enable-multibyte --enable-rubyinterp=yes --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config --disable-gui --enable-perlinterp=yes --enable-luainterp=yes  --enable-cscope --prefix=/usr`
+`./configure --with-features=huge --enable-multibyte --enable-rubyinterp=yes --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config --disable-gui --enable-perlinterp=yes --enable-luainterp=yes  --enable-cscope --prefix=/usr/local`
 
 ### 遇到的问题
 
