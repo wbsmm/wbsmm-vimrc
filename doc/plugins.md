@@ -140,5 +140,28 @@ q    to close the quickfix window
 `:h g:lightline.component_function` 可以支持自定义函数,配置那里`'component_function': {`
 
 
+# 版本控制相关
+
+[tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+一个很著名的插件,集成git操作到vim. 由于IDE的习惯,跟喜欢单独窗口执行git相关操作.
+
+在文件中显示区别的(hunk plugin)
+[vim-signify](https://github.com/mhinz/vim-signify)
+[vim-gitgutter](https://github.com/airblade/vim-gitgutter) 这个只支持git,但是有stage or undo an individual hunk功能
+
+## vim-signify
+
+`:h signify-modus-operandi`
+`:SignifyToggle`
+`:SignifyRefresh`
+`:SignifyToggleHighlight`
+`:SignifyFold[!]`
+
+跳转和vimdiff中的一致
+]c   Jump to next hunk.
+[c   Jump to previous hunk.
+
+]C   Jump to last hunk.
+[C   Jump to first hunk.
 
 

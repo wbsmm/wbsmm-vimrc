@@ -62,6 +62,8 @@ Plugin 'plasticboy/vim-markdown'
 " 配置vim底部的状态行
 Plugin 'itchyny/lightline.vim'
 
+" VCS 显示改动
+Plugin 'mhinz/vim-signify'
 
 " 代码提示 自动补全 函数变量声明跳转
 " ycm需要根据github文档安装,还需要编译的步骤
