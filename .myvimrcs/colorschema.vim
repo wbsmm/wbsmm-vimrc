@@ -6,6 +6,10 @@ colorscheme peaksea
 
 
 
+"尝试解决大文件语法高亮问题
+"let g:php_sync_method=9000
+"autocmd BufEnter * :syntax sync fromstart
+
 " 下面网址列出常用的xterm256色配置
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 " https://github.com/guns/xterm-color-table.vim
