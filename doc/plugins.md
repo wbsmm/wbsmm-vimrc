@@ -2,11 +2,10 @@
 
 # 前言
 
-1. vim版本至少要7.4.1578+(youcompleteme插件需要),可以编译安装vim
 
-2. `:h [插件名]`可以获取帮助文档 如`:h Vundle`;
+1. `:h [插件名]`可以获取帮助文档 如`:h Vundle`;
 
-3. 关于插件的配置一是vim配置,见vimrc,一般都是些快捷键配置.还有就是某些插件可能需要外部配置,在这里会说明.
+2. 关于插件的配置一是vim配置,见vimrc,一般都是些快捷键配置.还有就是某些插件可能需要外部配置,在这里会说明.
 
 # Vundle
 [Vundle](https://github.com/VundleVim/Vundle.vim) 用于插件管理

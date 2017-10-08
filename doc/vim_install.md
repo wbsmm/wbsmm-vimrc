@@ -1,21 +1,26 @@
 # 安装vim8
 
-## 说明
+## mac
 mac的话直接brew安装
 
-ubuntu debian的话可先用apt-get 更新.
-如果不行ppa的源来安装,但是在我阿里云(ubuntu14.04)上还是出了问题
 
-## ppa源
-**未成功,我自己用的编译安装**
-更新的话使用PPA的源
-`sudo add-apt-repository ppa:pkg-vim/vim-daily`
-`sudo apt-get update`
-`sudo apt-get install vim`
-14.04 16.04 会有add-apt-repository: command not found
-执行`apt-get install software-properties-common`
+`brew install macvim --with-lua `
+`brew install vim --with-lua `
 
 
+### 装vim时错误
+
+```
+if_python.c:67:10: fatal error: 'Python.h' file not found
+#include <Python.h>
+```
+Python.h头文件找不到
+
+最后是`brew upgrade python` 更新python解决
+
+
+## ubuntu debian
+如果能用apt的话最好 否则就编译安装
 
 
 ## 编译安装

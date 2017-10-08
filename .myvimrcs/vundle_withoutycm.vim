@@ -67,14 +67,14 @@ Plugin 'mhinz/vim-signify'
 
 " 代码提示 自动补全 函数变量声明跳转
 " ycm需要根据github文档安装,还需要编译的步骤
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " ycm没有php的语义,但其内部集成了补全插件,可以使用ctags实现补全
 " 当前只是简单的添加了几条规则 并起了个phptags的别名
 " github上有vim-php/phpctags 和 vim-php/tagbar-phpctags.vim 项目
 
 
 " ycm插件替换 都是补全插件 neocomplete需要lua支持
-"Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neocomplete.vim'
 "Plugin 'ervandew/supertab'
 "Plugin 'vim-scripts/AutoComplPop'
 "Plugin 'shawncplus/phpcomplete.vim'
