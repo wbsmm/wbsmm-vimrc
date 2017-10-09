@@ -18,6 +18,8 @@ Python.h头文件找不到
 
 最后是`brew upgrade python` 更新python解决
 
+另外已经装好的macvim需要卸载重装,否则无法启动会报`Caught deadly signal SEGV`错误.猜测应该是ycm用了python的原因导致.
+
 
 ## ubuntu debian
 如果能用apt的话最好 否则就编译安装
