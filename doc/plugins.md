@@ -55,9 +55,10 @@ PS: `:h 插件名`可查看文档如:
 # tagbar
 [tagbar](https://github.com/majutsushi/tagbar) idea的structure eclipse的outline
 基于tags实现. 语言支持见[tagbar wiki](https://github.com/majutsushi/tagbar/wiki)
+当前配置成F9, 但是感觉不好使,(tags不好的原因?)
 
 php在github有phpctags工具和[vim-php/tagbar-phpctags.vim](https://github.com/vim-php/tagbar-phpctags.vim)插件.
-但当前并未使用
+但不打算使用这个
 
 # ctrlp
 [ctrlp](https://github.com/kien/ctrlp.vim) 一个目录窗口 查找文件 
@@ -119,6 +120,11 @@ q    to close the quickfix window
 很老的主题 也还不错
  
 
+# godlygeek/tabular
+[godlygeek/tabular](https://github.com/godlygeek/tabular)
+帮助排版(对齐插件)
+
+`:Tabularize /,`
 
 # vim-markdown
 [vim-markdown](https://github.com/plasticboy/vim-markdown)
