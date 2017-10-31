@@ -75,11 +75,11 @@ Plugin 'mhinz/vim-signify'
 
 " ycm插件替换 都是补全插件 neocomplete需要lua支持
 Plugin 'Shougo/neocomplete.vim'
-" tab列表是从下往上选择的
+" tab列表是从下往上选择的,功能重复
 "Plugin 'ervandew/supertab'
-" 太老了
+" 太老了,功能重复
 "Plugin 'vim-scripts/AutoComplPop'
-" 添加PHP的函数上的自动补全
+" 添加PHP的函数上的omni补全
 " https://github.com/shawncplus/phpcomplete.vim/blob/master/GUIDE.md
 Plugin 'shawncplus/phpcomplete.vim'
 

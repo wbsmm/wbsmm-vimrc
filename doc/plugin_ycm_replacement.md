@@ -32,9 +32,9 @@ vim需要lua支持.
 <ctrl-x><ctrl-o> 补全
 CTRL+n  CTRL+p 上下选择
 <tab>键补全
-`:only`只保留当前窗口,用来关闭上面的提示窗口
+`:pc`关闭顶部的预览窗口;https://vi.stackexchange.com/questions/4056/is-there-an-easy-way-to-close-a-scratch-buffer-preview-window
 
-更好的tags工具
+#### 更好的tags工具
 [Getting-better-tags](https://github.com/shawncplus/phpcomplete.vim/wiki/Getting-better-tags)
 `ctags -R --fields=+aimlS --languages=php `,命名空间有问题.不过当前对我来说够用了.
 
@@ -42,3 +42,4 @@ CTRL+n  CTRL+p 上下选择
 一个纯PHP实现的phpctags项目
 
 PS:当前这几种ctags使用上并未感觉到区别.
+
