@@ -85,7 +85,7 @@ tmux开启鼠标功能后,复制用的tmux的.但是将鼠标移到右边滚动�
 问题: `-vvv` 发现`X11 forwarding requested but DISPLAY not set`
 本地(登之前)DISPLAY变量未设置. 这个变量应该会被xquartz自动设置才对.最后发现是终端没有彻底退出的原因
 
-## xclip
+## [xclip](https://github.com/milki/xclip)
 一个使用x-window的剪贴板程序
 `xclip -sel clip`表示使用系统剪贴板,默认是其内置剪贴板
 所以一般`alias xclip="xclip -sel clip"`
@@ -94,6 +94,15 @@ tmux开启鼠标功能后,复制用的tmux的.但是将鼠标移到右边滚动�
 
 然后现在远程机器情况下 vim复制到`"+`寄存器 本地就可以command+v了
 
+### 使用时报`Error: target STRING not available`
+感觉像是xclip程序自身的问题,见这个[issue](https://github.com/astrand/xclip/issues/38)
+
+解决办法:第一次启动x11后,随便在服务端选一个x11 app运行,如:xclock
+
+
+`ssh -C`
+`ssh -Y`
+????????????????????结果还是不怎么好使,暂时去掉了这个功能
 
 
 

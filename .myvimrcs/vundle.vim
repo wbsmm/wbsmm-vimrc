@@ -38,9 +38,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 
 " peaksea 主题
-" Plugin 'vim-scripts/peaksea' "改成从官网下最新的
+Plugin 'vim-scripts/peaksea'
 
-
+" 为了修复php大文件语法高亮问题,自己fork的官方插件
+Plugin 'silicon621600/PHP-Indenting-for-VIm'
 
 " Plugin 'dracula/vim'
 " Plugin 'crusoexia/vim-dracula'
@@ -98,6 +99,7 @@ Plugin 'majutsushi/tagbar'
 " 文档;
 " find usage;
 " refactor-rename; vim-multiple-cursors sublime多光标编辑
+
 
 
 " All of your Plugins must be added before the following line

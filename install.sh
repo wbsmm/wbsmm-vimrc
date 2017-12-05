@@ -34,9 +34,6 @@ fi
 mkdir -p ~/.myvimrcs
 cp .myvimrcs/* ~/.myvimrcs
 
-echo "copy .myvimruntime"
-mkdir -p ~/.myvimruntime/
-cp  -r .myvimruntime/*  ~/.myvimruntime/
 
 echo 'copy svndiffwrap.sh to /usr/local/bin/'
 cp configfiles/svndiffwrap.sh  /usr/local/bin/svndiffwrap.sh

@@ -1,4 +1,3 @@
-set runtimepath+=~/.myvimruntime
 source ~/.myvimrcs/vundle.vim
 source ~/.myvimrcs/plugins.vim
 source ~/.myvimrcs/plugins_ycm.vim

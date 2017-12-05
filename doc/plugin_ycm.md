@@ -8,7 +8,7 @@ mac下使用`brew install cmake`就行
 ubuntu `sudo apt-get install build-essential cmake` `sudo apt-get install python-dev python3-dev`
 3. 执行安装脚本
     `cd ~/.vim/bundle/YouCompleteMe`
-    `./install.py `可选择对应的语言参数 如`--clang-completer`支持c风格语言(PS:**会下载clang4.0.0时间有点长**)
+    `./install.py `可选择对应的语言参数 如`--clang-completer`支持c风格语言(PS:**会下载clang时间有点长**)
     
 4. phptags
 默认没有php的语义,但其内置了neocomplcache.所以可用tags.

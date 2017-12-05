@@ -6,7 +6,7 @@ colorscheme peaksea
 
 
 
-"尝试解决大文件语法高亮问题
+"尝试解决大文件语法高亮问题,已解决 php-indent插件的let g:php_sync_method=0要注掉
 "let g:php_sync_method=9000
 "autocmd BufEnter * :syntax sync fromstart
 
