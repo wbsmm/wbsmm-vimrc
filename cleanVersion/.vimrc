@@ -130,16 +130,6 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 设置主题
-set background=dark
-colorscheme peaksea
-
-" 设置光标所在行
-if &t_Co==256
-    autocmd ColorScheme * hi CursorLine   ctermbg=236  cterm=NONE guibg=#303030 gui=NONE
-endif
-autocmd ColorScheme * hi CursorLine   guibg=#303030 gui=NONE
-
 " Enable syntax highlighting
 syntax enable
 
@@ -375,4 +365,16 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+
+
+" 设置主题
+set background=dark
+colorscheme peaksea
+
+" 设置光标所在行
+if &t_Co==256
+    autocmd ColorScheme * hi CursorLine   ctermbg=236  cterm=NONE guibg=#303030 gui=NONE
+endif
+autocmd ColorScheme * hi CursorLine   guibg=#303030 gui=NONE
 
