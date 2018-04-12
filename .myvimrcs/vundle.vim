@@ -27,8 +27,9 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " MRU 最近最长使用文件窗口
 Plugin 'vim-scripts/mru.vim'
 
-" 语法检查
-Plugin 'vim-syntastic/syntastic'
+" 语法检查 用ale替换,快(使用vim8的异步)
+"Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 " 查找文件
 Plugin 'kien/ctrlp.vim'
@@ -60,11 +61,15 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 
-" 配置vim底部的状态行
-Plugin 'itchyny/lightline.vim'
+" 配置vim底部的状态行 airline 和其它插件交互比较多,自动探测并显示
+"Plugin 'itchyny/lightline.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " VCS 显示改动
 Plugin 'mhinz/vim-signify'
+" git
+Plugin 'tpope/vim-fugitive'
 
 " 代码提示 自动补全 函数变量声明跳转
 " ycm需要根据github文档安装,还需要编译的步骤
