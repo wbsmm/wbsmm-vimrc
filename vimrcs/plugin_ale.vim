@@ -6,8 +6,8 @@ let g:airline#extensions#ale#enabled = 1
 " 打开文件不执行
 "let g:ale_lint_on_enter = 0
 
-let g:ale_sign_error = emoji#for('x')
-let g:ale_sign_warning = emoji#for('o')
+let g:ale_sign_error = '❌' 
+let g:ale_sign_warning = '❗️'
 
 " linters都要自己装的，并且得确保在终端下能正常使用。看实际运行情况linter用 `:ALEInfo`命令
 

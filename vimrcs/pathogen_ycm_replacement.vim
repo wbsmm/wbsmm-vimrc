@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
-source ~/silicon-vimrc/plugin_common_non_forked/vim-pathogen/autoload/pathogen.vim
+source ~/silicon-vimrc/plugins/non_forked/vim-pathogen/autoload/pathogen.vim
 let s:vim_runtime = "~/silicon-vimrc"
 call pathogen#infect(s:vim_runtime.'/plugins/colorschema/{}')
 call pathogen#infect(s:vim_runtime.'/plugins/non_forked/{}')

@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " ctrlp 插件配置
-set runtimepath^=~/silicon-vimrc/plugin_common_non_forked/ctrlp.vim
+set runtimepath^=~/silicon-vimrc/plugins/non_forked/ctrlp.vim
 
 
 
@@ -59,7 +59,9 @@ nmap <F9> :TagbarToggle<CR>
 " tab标签显示
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_theme = 'powerlineish'
-
+" 手动指定需要交互的插件  
+" 一发现tagbar 会导致打开大PHP文件时卡顿..../(ㄒoㄒ)/~~  风格差的代码总各种麻烦
+let g:airline_extensions = ['ale', 'ctrlp', 'fugitiveline', 'hunks', 'branch', 'tabline']
 
 
 " vim-signify 插件配置
