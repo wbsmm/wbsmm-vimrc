@@ -11,3 +11,5 @@ peaksea的一个优点是在max自带终端是白色背景的情况下,vim背景
 'nanotech/jellybeans.vim'
 ```
 
+另外 可能存在定制的可能
+

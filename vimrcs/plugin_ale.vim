@@ -6,8 +6,18 @@ let g:airline#extensions#ale#enabled = 1
 " 打开文件不执行
 "let g:ale_lint_on_enter = 0
 
-let g:ale_sign_error = '❌' 
-let g:ale_sign_warning = '❗️'
+" 参考https://github.com/w0rp/ale/issues/249 配置
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '•'
+let g:ale_sign_style_error = '⚠'
+let g:ale_sign_style_warning = '•'
+" 设置高亮和背景,链接到colorschema的设置, emoji高亮看情况
+highlight link ALEErrorSign Error
+highlight link ALEWarningSign Warning
+
+" ctrl j k 跳转
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " linters都要自己装的，并且得确保在终端下能正常使用。看实际运行情况linter用 `:ALEInfo`命令
 
@@ -15,7 +25,6 @@ let g:ale_sign_warning = '❗️'
 " php 不启用ale,上万行php明显卡顿(几千行的问题)这是airlinec插件的原因,而且也不可能对别人的代码ALEFix
 let g:ale_linters = {
 \   'python': ['flake8'],
-\   'php': [''],
 \ }
 let g:ale_python_flake8_options = '--max-line-length=120'
 " Fix就用这两个, isort用于处理头文件

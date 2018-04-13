@@ -60,7 +60,7 @@ nmap <F9> :TagbarToggle<CR>
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_theme = 'powerlineish'
 " 手动指定需要交互的插件  
-" 一发现tagbar 会导致打开大PHP文件时卡顿..../(ㄒoㄒ)/~~  风格差的代码总各种麻烦
+" 一发现tagbar 会导致打开大PHP文件时卡顿..../(ㄒoㄒ)/~~  在官方readme.md的Performance有提到这点.
 let g:airline_extensions = ['ale', 'ctrlp', 'fugitiveline', 'hunks', 'branch', 'tabline']
 
 
