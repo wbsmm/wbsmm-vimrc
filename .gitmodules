@@ -1,0 +1,54 @@
+[submodule "plugins/colorschema/peaksea"]
+	path = plugins/colorschema/peaksea
+	url = http://github.com/vim-scripts/peaksea
+[submodule "plugins/forked/PHP-Indenting-for-VIm"]
+	path = plugins/forked/PHP-Indenting-for-VIm
+	url = http://github.com/2072/PHP-Indenting-for-VIm
+[submodule "plugins/non_forked/nerdtree"]
+	path = plugins/non_forked/nerdtree
+	url = http://github.com/scrooloose/nerdtree.git
+[submodule "plugins/non_forked/nerdtree-git-plugin"]
+	path = plugins/non_forked/nerdtree-git-plugin
+	url = http://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "plugins/non_forked/mru.vim"]
+	path = plugins/non_forked/mru.vim
+	url = http://github.com/vim-scripts/mru.vim.git
+[submodule "plugins/non_forked/ale"]
+	path = plugins/non_forked/ale
+	url = http://github.com/w0rp/ale.git
+[submodule "plugins/non_forked/ack.vim"]
+	path = plugins/non_forked/ack.vim
+	url = http://github.com/mileszs/ack.vim
+[submodule "plugins/non_forked/tabular"]
+	path = plugins/non_forked/tabular
+	url = http://github.com/godlygeek/tabular
+[submodule "plugins/non_forked/vim-airline-themes"]
+	path = plugins/non_forked/vim-airline-themes
+	url = http://github.com/vim-airline/vim-airline-themes
+[submodule "plugins/non_forked/vim-airline"]
+	path = plugins/non_forked/vim-airline
+	url = http://github.com/vim-airline/vim-airline
+[submodule "plugins/non_forked/vim-signify"]
+	path = plugins/non_forked/vim-signify
+	url = http://github.com/mhinz/vim-signify
+[submodule "plugins/non_forked/vim-fugitive"]
+	path = plugins/non_forked/vim-fugitive
+	url = http://github.com/tpope/vim-fugitive
+[submodule "plugins/non_forked/tagbar"]
+	path = plugins/non_forked/tagbar
+	url = http://github.com/majutsushi/tagbar
+[submodule "plugins/non_forked/vim-pathogen"]
+	path = plugins/non_forked/vim-pathogen
+	url = http://github.com/tpope/vim-pathogen
+[submodule "plugins/non_forked/ctrlp.vim"]
+	path = plugins/non_forked/ctrlp.vim
+	url = http://github.com/kien/ctrlp.vim
+[submodule "plugins/ycm/YouCompleteMe"]
+	path = plugins/ycm/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "plugins/ycm_replacement/neocomplete.vim"]
+	path = plugins/ycm_replacement/neocomplete.vim
+	url = http://github.com/Shougo/neocomplete.vim
+[submodule "plugins/ycm_replacement/phpcomplete.vim"]
+	path = plugins/ycm_replacement/phpcomplete.vim
+	url = http://github.com/shawncplus/phpcomplete.vim
