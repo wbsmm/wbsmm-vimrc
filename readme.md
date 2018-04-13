@@ -1,35 +1,75 @@
-# 服务端开发环境配置
+# 说明
 
-## 说明
+## 仓库介绍
 
-    这仓库其实是用终端ssh连公司服务器的工作环境配置,vim作为编辑器是最重要的.所以配置上可能忽略其它环境的一些问题.
-我感觉能够本地开发的项目,还是用IDE更好 ^_^.
+silicon-vimrc 不单单是我的vim配置,还包括我在linux上开发机的一些配置.在公司用ssh登录开发机写代码.
+所以本vim配置是针对终端,我并不是vim党,且一直认为能够本地开发的项目,还是用IDE更好 T^T.
 
-具体环境:
-服务器是 debian7.1. 版本太老,装不上Youcompleteme插件...
-然后我本机OSX EI Captian和 阿里云 ubuntu14.04. 也会对应安装.但是由于一般不用,所以可能有隐藏问题.
-
-现阶段是为php开发服务;  
-  
-希望对你的环境搭建有所帮助.
-
-PS:其实主要就是这几样工具: ssh相关,终端,会话工具,编辑器
+## 安装方式
     
-## 编辑器 vim
-    之前直接用的[amix/vimrc](https://github.com/amix/vimrc)Awosome版本.但是感觉自己不需要那么多配置,而且始终记不住一些功能.
-索性在其basic[amix/vimrc basic](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)基础上,自己一个个单独安装插件.
-已装的插件见[plugin.md](doc/plugin.md)
+```
+cd ~
+https://github.com/silicon621600/silicon-vimrc.git
+cd silicon-vimrc
+
+# 插件往往依赖于外部命令,用下面脚本检查.
+./check_env.sh
+
+#  ycm ycm_replacement 根据需求选择 
+./install ycm_replacement
+```
+
+ycm和ycm_replacement区别在于自动补全插件,都需要VIM8(用了ale语法插件).
+当前vim配置适用于PHP和python两种语言开发.
+     
+1. ycm
+  带ycm插件(YouCompleteMe)的版本,在我的mac上安装.YCM在新的系统环境下(ubuntu16.04)还是好安装的
+  插件安装完成后,需要按照[YCM](https://github.com/Valloric/YouCompleteMe)的文档进行进一步安装
+  环境没问题的话
+  ```
+  cd ~/.vim/bundle/YouCompleteMe
+  ./install.py --clang-completer
+  ```
+  
+2. ycm_replacement
+  公司是 debian7.1. 版本太老,装不上Youcompleteme插件...clang需要编译安装,但是开发机是vps,硬盘很小....
+  所以只能将ycm替换掉.
+  使用'Shougo/neocomplete.vim'和'shawncplus/phpcomplete.vim'作为ycm替代.
+  其它的'ervandew/supertab'tab列表是从下往上选择的,功能重复;'vim-scripts/AutoComplPop'太老了,功能重复
+  补全是基于ctags的相关概念,可参考这个[链接](https://github.com/shawncplus/phpcomplete.vim/blob/master/GUIDE.md)
+    
+由于某些插件依赖于外部库或者工具,所以建议`check_env.sh`里面的WARN至少都要解决掉.
+PS:实际上这么久的vim使用,凡是需要主动敲命令的插件都用得很少
+
+### 帮助文档
+TODO
+
+### 卸载
+直接删除目录和文件即可
+```
+rm -rf ~/silicon-vimrc
+rm ~/.vimrc
+```
+
+## clean 版本
+
+  将仓库`cleanVersion`目录内的东西复制到主目录`~`即可
+  这是一个清洁版本,除了一个peaksea主题插件外,没有其它任何插件,配置是在[amix](https://github.com/amix/vimrc)的basic上做了适用于自己的改动
+
+    
+# 其它终端开发用到的工具
+    
 
 ## 会话工具 tmux
-我用的是[tmux](doc/tmux.md).就因为它比screen新.
+我用的是[tmux](note/tmux.md).就因为它比screen新.
 
 ## ssh
-[ssh](doc/ssh.md)总结了一些关于ssh的简化操作
+[ssh](note/ssh.md)总结了一些关于ssh的简化操作
 
 ## 终端(iterm2+zsh)
-其实mac自带终端加了zsh后也不错了.不过iterm2一些细节上做的更好[iterm2.md](doc/iterm2.md)
+其实mac自带终端加了zsh后也不错了.不过iterm2一些细节上做的更好[iterm2.md](note/iterm2.md)
 
 ## 其它
-1. 比较工具,[vimdiff](doc/diff.md).必须两窗口形式才好比较.
+1. 比较工具,[vimdiff](note/diff.md).必须两窗口形式才好比较.
 
 

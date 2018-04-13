@@ -2,51 +2,31 @@
 
 OP=$1
 
-if [ "$OP" != 'default' ] && [ "$OP" != 'without_ycm' ]; then
-    echo "need op param: default or without_ycm"
+if  [ "$OP" != 'ycm' ]  && [ "$OP" != 'ycm_replacement' ]; then
+    echo "need type param. There are two types:  ycm, ycm_replacement . Please choose one"
     exit 0
 fi
 
-./prepare.sh
-
-RES=$?
+if [ "$2" != '--not_check_env' ]; then
+    ./check_env.sh
+    RES=$?
+else
+    RES=0
+fi
 
 if [ $RES -ne 0 ]; then
-    echo "prepare failed. cannot connot continue"
+    echo "Here are some warnings.Suggest you solve these. Use '--not_check_env' to skip"
     exit 1
-else
-    echo -e "\n begin install................."
 fi
 
-echo 'copy .ctags to ~/'
-cp configfiles/.ctags ~/.ctags
-
-echo 'copy .tmux.conf to ~/'
-cp configfiles/.tmux.conf ~/.tmux.conf
-
-echo 'copy .vimrc and .myvimrcs to ~/'
-if [ $OP = 'default' ];then
-    cp configfiles/default.vimrc ~/.vimrc
-elif [ $OP = 'without_ycm' ]; then
-    cp configfiles/without_ycm.vimrc ~/.vimrc
-fi
-
-mkdir -p ~/.myvimrcs
-cp .myvimrcs/* ~/.myvimrcs
-
-
-echo 'copy svndiffwrap.sh to /usr/local/bin/'
-cp configfiles/svndiffwrap.sh  /usr/local/bin/svndiffwrap.sh
-
-echo "the follow are some useful config can add to your bashrc"
-cat configfiles/.bashrc
+mv ~/.vimrc ~/.vimrc.bak
+cp "./vimrcs/$OP.vimrc" ~/.vimrc
 
 has_gvim=$(command -v gvim)
 if [ ! "$has_gvim" ]; then
     echo "copy .gvimrc"
-    cp configfiles/.gvimrc ~/.gvimrc
-else
-    echo "no gvim installed"
+    mv ~/.gvimrc ~/.gvimrc.bak
+    cp linux_configs/.gvimrc ~/.gvimrc
 fi
 
-echo "install complete. use :PluginInstall to install vim plugin. and YCM plugin need extra config"
+echo -e "\n Successfully installed. \n"
