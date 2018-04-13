@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " ctrlp 插件配置
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/silicon-vimrc/plugin_common_non_forked/ctrlp.vim
 
 
 
@@ -12,6 +12,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+" 处理Ack软件版本小于2.0的-s参数错误; 不过当前我已编译安装Ag-2.0.0
+" let g:ack_default_options = " -H --nocolor --nogroup --column"
 
 
 
