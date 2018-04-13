@@ -27,8 +27,8 @@ ycm和ycm_replacement区别在于自动补全插件,都需要VIM8(用了ale语�
   插件安装完成后,需要按照[YCM](https://github.com/Valloric/YouCompleteMe)的文档进行进一步安装
   环境没问题的话
   ```
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --clang-completer
+  cd ~/silicon-vimrc/plugins/ycm/YouCompleteMe
+  ./install.py --clang-completer --java-completer
   ```
   
 2. ycm_replacement

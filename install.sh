@@ -28,5 +28,8 @@ if [ ! "$has_gvim" ]; then
     mv ~/.gvimrc ~/.gvimrc.bak
     cp linux_configs/.gvimrc ~/.gvimrc
 fi
-
+# submoudle工程又有submoudle的时候默认不会下载,似乎只有ycm需要下载一堆第三方包
+if  [ "$OP" = 'ycm' ]; then
+    git submodule update --init --recursive
+fi
 echo -e "\n Successfully installed. \n"
