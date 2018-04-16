@@ -30,6 +30,9 @@ if [ ! "$has_gvim" ]; then
 fi
 # submoudle工程又有submoudle的时候默认不会下载,似乎只有ycm需要下载一堆第三方包
 if  [ "$OP" = 'ycm' ]; then
+# ycm仓库本身就包含子仓库
     git submodule update --init --recursive
+else
+    git submodule update --init
 fi
 echo -e "\n Successfully installed. \n"
