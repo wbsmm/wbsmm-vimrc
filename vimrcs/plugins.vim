@@ -56,12 +56,20 @@ nmap <F9> :TagbarToggle<CR>
 
 
 " airline 插件配置
-" tab标签显示
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_theme = 'powerlineish'
 " 手动指定需要交互的插件  
 " 一发现tagbar 会导致打开大PHP文件时卡顿..../(ㄒoㄒ)/~~  在官方readme.md的Performance有提到这点.
-let g:airline_extensions = ['ale', 'ctrlp', 'fugitiveline', 'hunks', 'branch', 'tabline']
+" 另外tabline有bug tab页栏总是1 https://github.com/vim-airline/vim-airline/issues/1360 这里将其关闭
+let g:airline_extensions = ['ale', 'ctrlp', 'fugitiveline', 'hunks', 'branch']
+
+" lightline 插件只使用tabline功能
+let g:lightline = {
+        \ 'enable':{
+        \   'statusline': 0,
+        \   'tabline': 1
+        \ },            
+        \ 'colorscheme': 'powerline',
+        \ }
 
 
 " vim-signify 插件配置
