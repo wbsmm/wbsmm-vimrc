@@ -16,7 +16,7 @@ cd silicon-vimrc
 ./check_env.sh
 
 #  ycm ycm_replacement 根据需求选择 
-./install ycm_replacement
+./install.sh ycm_replacement
 ```
 
 ycm和ycm_replacement区别在于自动补全插件,都需要VIM8(用了ale语法插件).
