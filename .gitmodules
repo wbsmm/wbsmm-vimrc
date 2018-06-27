@@ -52,9 +52,6 @@
 [submodule "plugins/ycm_replacement/phpcomplete.vim"]
 	path = plugins/ycm_replacement/phpcomplete.vim
 	url = http://github.com/shawncplus/phpcomplete.vim
-[submodule "plugins/forked/--force"]
-	path = plugins/forked/--force
-	url = https://github.com/silicon621600/PHP-Indenting-for-VIm.git
 [submodule "plugins/non_forked/lightline.vim"]
 	path = plugins/non_forked/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git

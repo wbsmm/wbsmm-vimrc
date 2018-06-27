@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " ctrlp 插件配置
-set runtimepath^=~/silicon-vimrc/plugins/non_forked/ctrlp.vim
+set runtimepath^=~/wbsmm-vimrc/plugins/non_forked/ctrlp.vim
 
 
 

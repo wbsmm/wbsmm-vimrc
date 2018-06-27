@@ -2,15 +2,15 @@
 
 ## 仓库介绍
 
-silicon-vimrc 不单单是我的vim配置,还包括我在linux上开发机的一些配置.在公司用ssh登录开发机写代码.
+wbsmm-vimrc 不单单是我的vim配置,还包括我在linux上开发机的一些配置.在公司用ssh登录开发机写代码.
 所以本vim配置是针对终端,我并不是vim党,且一直认为能够本地开发的项目,还是用IDE更好 T^T.
 
 ## 安装方式
     
 ```
 cd ~
-https://github.com/silicon621600/silicon-vimrc.git
-cd silicon-vimrc
+git clone https://github.com/wbsmm/wbsmm-vimrc.git
+cd wbsmm-vimrc
 
 # 插件往往依赖于外部命令,用下面脚本检查.
 ./check_env.sh
@@ -27,7 +27,7 @@ ycm和ycm_replacement区别在于自动补全插件,都需要VIM8(用了ale语�
   插件安装完成后,需要按照[YCM](https://github.com/Valloric/YouCompleteMe)的文档进行进一步安装
   环境没问题的话
   ```
-  cd ~/silicon-vimrc/plugins/ycm/YouCompleteMe
+  cd ~/wbsmm-vimrc/plugins/ycm/YouCompleteMe
   ./install.py --clang-completer --java-completer
   ```
   
@@ -47,7 +47,7 @@ TODO
 ### 卸载
 直接删除目录和文件即可
 ```
-rm -rf ~/silicon-vimrc
+rm -rf ~/wbsmm-vimrc
 rm ~/.vimrc
 ```
 

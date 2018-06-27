@@ -1,6 +1,6 @@
-source ~/silicon-vimrc/vimrcs/pathogen_ycm_replacement.vim
-source ~/silicon-vimrc/vimrcs/basic.vim
-source ~/silicon-vimrc/vimrcs/colorschema.vim
-source ~/silicon-vimrc/vimrcs/plugins.vim
-source ~/silicon-vimrc/vimrcs/plugin_ale.vim
-source ~/silicon-vimrc/vimrcs/plugins_ycm_replacement.vim
+source ~/wbsmm-vimrc/vimrcs/pathogen_ycm_replacement.vim
+source ~/wbsmm-vimrc/vimrcs/basic.vim
+source ~/wbsmm-vimrc/vimrcs/colorschema.vim
+source ~/wbsmm-vimrc/vimrcs/plugins.vim
+source ~/wbsmm-vimrc/vimrcs/plugin_ale.vim
+source ~/wbsmm-vimrc/vimrcs/plugins_ycm_replacement.vim
