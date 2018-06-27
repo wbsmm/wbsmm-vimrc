@@ -3,7 +3,7 @@
 	url = http://github.com/vim-scripts/peaksea
 [submodule "plugins/forked/PHP-Indenting-for-VIm"]
 	path = plugins/forked/PHP-Indenting-for-VIm
-	url = https://github.com/silicon621600/PHP-Indenting-for-VIm.git
+	url = https://github.com/wbsmm/PHP-Indenting-for-VIm.git
 [submodule "plugins/non_forked/nerdtree"]
 	path = plugins/non_forked/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
