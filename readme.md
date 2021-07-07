@@ -60,6 +60,8 @@ rm ~/.vimrc
 # 其它终端开发用到的工具
     
 
+入门级VIM使用图解： [入门级VIM使用图解](http://blog.csdn.net/Marksinoberg/article/details/77595574)
+
 ## 会话工具 tmux
 我用的是[tmux](note/tmux.md).就因为它比screen新.
 
